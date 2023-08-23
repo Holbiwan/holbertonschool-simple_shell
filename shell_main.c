@@ -1,27 +1,25 @@
 #include "shell.h"
-/**
- * _getline - function that used to read a string or a line
- * Return: 0
- */
-int _getline(void)
-{
-	char *string = NULL;
-	size_t size = 0;
-	ssize_t bytes_read = 0;
-	int i;
 
-	printf("$ ");
-	for (i = 0; i < 1; i++)
+/**
+ * main - Entry of the program
+ * Return: Always(0)
+ */
+int main(void)
+{
+	int status = 1;
+	char *input_line = NULL;
+	size_t line_size = 0;
+
+	signal(SIGINT, sig_handler);
+
+	while (status)
 	{
-	bytes_read = getline(&string, &size, stdin);
-	if (bytes_read == -1)
-	{
-	perror("getline");
+		_getline(&input_line, &line_size);
+		_strtok();
+		_fork();
 	}
-	else
-	printf("entered: %s", string);
-	}
-	free(string);
+
+	free(input_line);
 
 	return (0);
 }
@@ -76,22 +74,31 @@ void sig_handler(int signum)
 		write(STDOUT_FILENO, "\n$ ", 3);
 	}
 }
+
 /**
- *main - main function
+ * _getline - Reads a line of text from standard input and prints it.
+ * @string: Pointer to a buffer where the line will be stored.
+ * @size: Size of the buffer.
  *
- *Return: Always(0)
+ * This function prompts the user to enter a line, reads it from
+ * standard input, and stores it in the buffer.
+ *
+ * Return: Always returns 0.
  */
-int main(void)
+int _getline(char **string, size_t *size)
 {
-	int status = 1;
+	ssize_t bytes_read;
 
-	signal(SIGINT, sig_handler);
+	printf("$sa_team ");
+	bytes_read = getline(string, size, stdin);
 
-	while (status)
+	if (bytes_read == -1)
 	{
-		_getline();
-		_strtok();
-		_fork();
+		perror("getline");
+	}
+	else
+	{
+		printf("entered: %s", *string);
 	}
 	return (0);
 }
