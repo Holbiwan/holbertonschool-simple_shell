@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "shell.h"i
 
 /**
  * main - Entry of the program
@@ -25,7 +25,7 @@ int main(void)
 }
 
 /**
- * _strtok - function that used to read a string or a line
+ * _strtok - Function that used to read a string or a line
  * Return: 0
  */
 int _strtok(void)
@@ -42,7 +42,7 @@ int _strtok(void)
 }
 
 /**
-* _fork - creating a new process
+* _fork - Function creating a new process
 *Return: void
 */
 void _fork(void)
@@ -61,7 +61,7 @@ void _fork(void)
 	}
 }
 /**
-* sig_handler - checks if Ctrl C is pressed by the input
+* sig_handler - function checks if Ctrl C is pressed by the input
 * @signum: int
 *Return: void
 */
@@ -75,7 +75,7 @@ void sig_handler(int signum)
 }
 
 /**
- * _getline - Reads a line of text from standard input and prints it.
+ * _getline - Function that read a line from input and prints it.
  * @string: Pointer to a buffer where the line will be stored.
  * @size: Size of the buffer.
  *
