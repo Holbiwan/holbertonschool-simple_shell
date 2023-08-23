@@ -51,7 +51,25 @@ A shell is a command-line interpreter that provides a user interface to access t
 # **EXEMPLE**
 
 ```
-
+root@271189847cff:/holbertonschool-simple_shell# ./hsh
+$ ls -la
+total 68
+drwxr-xr-x 4 root root   219 Aug 23 09:40 .
+drwxr-xr-x 1 root root  4096 Aug 23 06:55 ..
+-rwxr-xr-x 1 root root   243 Aug 22 22:30 AUTHORS
+-rwxr--r-- 1 root root  1646 Aug 23 04:38 execute.c
+-rwxr--r-- 1 root root   533 Aug 23 04:37 free.c
+-rwxr--r-- 1 root root  1169 Aug 23 04:37 get_env.c
+drwxr-xr-x 8 root root   185 Aug 23 09:35 .git
+drwxr-xr-x 2 root root    33 Aug 22 22:29 hack
+-rwxr-xr-x 1 root root 18448 Aug 23 06:07 hsh
+-rwxr--r-- 1 root root  1642 Aug 23 05:39 main.c
+-rwxr-xr-x 1 root root   809 Aug 22 23:21 man_1_simple_shell
+-rwxr--r-- 1 root root  1158 Aug 23 04:35 parse_command.c
+-rwxr-xr-x 1 root root  4674 Aug 23 09:34 README.md
+-rwxr--r-- 1 root root   715 Aug 23 05:54 shell.h
+-rwxr--r-- 1 root root   963 Aug 23 05:06 shell_main.c
+$
 ```
 
 # **Testing** :diamonds:
