@@ -18,10 +18,11 @@
 
 void display_prompt(void);
 extern char **environ;
-int _getline(char **string, size_t *size);
+int _getline_prompt(char **string, size_t *size);
 int main(void);
 int _strtok(void);
 void _exit_program(void);
+void _getline_signal(void);
 int _strlen(char *s);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);

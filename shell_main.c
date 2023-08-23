@@ -1,4 +1,4 @@
-#include "shell.h"i
+#include "shell.h"
 
 /**
  * main - Entry of the program
@@ -14,7 +14,7 @@ int main(void)
 
 	while (status)
 	{
-		_getline(&input_line, &line_size);
+		_getline_prompt(&input_line, &line_size);
 		_strtok();
 		_fork();
 	}
