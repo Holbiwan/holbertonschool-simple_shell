@@ -17,7 +17,6 @@ int _strlen(char *s)
 *@str: string
 *Return: dest
 */
-
 char *_strdup(char *str)
 {
 	char *dest;
@@ -45,7 +44,6 @@ char *_strdup(char *str)
  * @s2: string
  * Return: int
  */
-
 int _strcmp(char *s1, char *s2)
 {
 int i, cmp = 0;
