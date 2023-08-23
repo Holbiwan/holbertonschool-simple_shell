@@ -32,4 +32,5 @@ int _stat(int ac, char **av);
 int _putchar(char c);
 int parse_string(char *str, const char *token);
 int _getline2(char *string, size_t size, ssize_t bytes_read);
+int _exit_program(void);
 #endif
