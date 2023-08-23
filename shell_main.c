@@ -94,10 +94,11 @@ int _getline(char **string, size_t *size)
 	if (bytes_read == -1)
 	{
 		perror("getline");
+		return (-1);
 	}
 	else
 	{
-		printf("entered: %s", *string);
+		parse_string(*string, DELIMIT);
 	}
 	return (0);
 }
