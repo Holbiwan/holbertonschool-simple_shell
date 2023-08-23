@@ -1,34 +1,40 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 #include <stddef.h>
 #include <sys/stat.h>
-#include <signal.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
 #include <sys/wait.h>
-#include <sys/types.h>
-#include <fcntl.h>
-#include <stddef.h>
-#define DELIMIT " \t\r\n\a"
-#define PROMPT "$sa_team "
-#define SIZE 1024
-#define PATH_MAX 1020
-
-void display_prompt(void);
+#include <sys/stat.h>
+#include <ctype.h>
+/* Global variable */
 extern char **environ;
-int _getline_prompt(char **string, size_t *size);
-int main(void);
-int _strtok(void);
-void _exit_program(void);
-void _getline_signal(void);
-int _strlen(char *s);
+
+#define PROMPT "$holbiies "
+#define BUFFER_SIZE 1024
+#define COMMAND_SIZE 64
+#define END_STRING_CHAR '\0'
+
+/* ----------String prototype------------*/
 char *_strdup(char *str);
+char *_strcat(char *first, char *second);
+int _strlen(char *str);
+char *_strchr(char *str, char c);
 int _strcmp(char *s1, char *s2);
-void _fork(void);
-void sig_handler(int signum);
-int _stat(int ac, char **av);
-int _putchar(char c);
-int parse_string(char *str, const char *token);
+
+char **parse_args(char *command);
+char *get_env_value(const char *name);
+char *get_value_from_env(const char *env);
+void free_all(char **command, char *str, char *execute_path);
+int custom_isspace(int ch);
+void free_string(char *string);
+void execute_command(char **command);
+int file_exists(const char *filepath);
+int find_execute_command(char *command, char *executable_path);
+
+/*------------strtok prototype-------------*/
+char **_strtok(char *str, const char *delim);
 #endif
