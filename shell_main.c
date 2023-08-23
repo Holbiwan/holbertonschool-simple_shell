@@ -28,7 +28,6 @@ int main(void)
  * _strtok - function that used to read a string or a line
  * Return: 0
  */
-
 int _strtok(void)
 {
 	char *str = " ";

@@ -16,6 +16,7 @@
 #define SIZE 1024
 #define PATH_MAX 1020
 
+void display_prompt(void);
 extern char **environ;
 int _getline(char **string, size_t *size);
 int main(void);
