@@ -5,46 +5,45 @@ NAME
 
 SYNOPSIS
 
-       
 
 DESCRIPTION
-       
 
 OPTIONS
-       To use this shell you have to compile doing and running the program doing :   
-       
-        gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
-        ./hsh
+To use this shell you have to compile doing and running the program doing :
+
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+
+./hsh
 
 COMMANDS
-      
-     
-     Several kind of commands can be used :
-   
-      pwd
 
-      ls -l 
-      
-      cat
+Several kind of commands can be used :
 
-      echo
- 
-      
-       
-    Execute the specified command and exit.
+pwd
 
-    exit: Exit the shell.
+ls -l
+
+cat
+
+echo
+
+Execute the specified command and exit.
+
+exit: Exit the shell.
+
 SCRIPTS
-       The simple-shell can also run shell scripts. A shell script is a file containing a series
-       of shell commands that are executed in sequence. To run a script, simply pass its file name
-       as an argument to the simple-shell command.
 
-       Note that the script should have the appropriate execute permissions for the user running
-       the simple-shell command.
+The simple-shell can also run shell scripts. A shell script is a file containing a series
+of shell commands that are executed in sequence. To run a script, simply pass its file name
+as an argument to the simple-shell command.
 
-AUTHORS
-       sabrina Papeau & Saima Riaz
+Note that the script should have the appropriate execute permissions for the user running
+the simple-shell command.
+
 
 BUGS
-       No known bugs.
+No known bugs.
+
+AUTHORS
+sabrina Papeau & Saima Riaz
