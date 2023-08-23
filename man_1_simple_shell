@@ -4,6 +4,7 @@ NAME
        simple-shell - UNIX command interpreter.
 
 SYNOPSIS
+
        
 
 DESCRIPTION
@@ -23,7 +24,7 @@ COMMANDS
    
       pwd
 
-      ls
+      ls -l 
       
       cat
 
