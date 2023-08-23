@@ -75,7 +75,7 @@ void sig_handler(int signum)
 }
 
 /**
- * _getline - Function that read a line from input and prints it.
+ * _getline_prompt - Function that read a line from input and prints it.
  * @string: Pointer to a buffer where the line will be stored.
  * @size: Size of the buffer.
  *
@@ -84,7 +84,7 @@ void sig_handler(int signum)
  *
  * Return: Always returns 0.
  */
-int _getline(char **string, size_t *size)
+int _getline_prompt(char **string, size_t *size)
 {
 	ssize_t bytes_read;
 
