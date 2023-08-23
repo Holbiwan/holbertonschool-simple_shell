@@ -19,7 +19,7 @@
 
 extern char **environ;
 int _getline(void);
-int _main(void);
+int main(void);
 int _strtok(void);
 int _exit2(void);
 void _exit(int status);
