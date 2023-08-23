@@ -48,6 +48,16 @@ A shell is a command-line interpreter that provides a user interface to access t
 |free_all|Used to free all allocated memory in the program|
 |file_exists|Check whether a specified file exists in the system|
 
+# **Tasks** :ladder:
+
+* Task 0. README, man_1_simple_shell, AUTHORS
+* Task 1. Betty would be proud
+* Task 2. Simple shell 0.1 - Write a UNIX command line interpreter
+* Task 3. Simple shell 0.2 - Handle command lines with arguments
+* Task 4. Simple shell 0.3 - Handle PATH - call fork if command no exist
+* Task 5. Simple shell 0.4 - Implement the exit built-in existing in shell
+* Task 6. Simple shell 1.0 - Implement env built-in, that prints current env
+
 # **EXEMPLE**
 
 ```
@@ -125,21 +135,6 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 ```
-
-# **BUGS** :warning:
-
-
-
-# **Tasks** :ladder:
-
-* Task 0. README, man_1_simple_shell, AUTHORS
-* Task 1. Betty would be proud
-* Task 2. Simple shell 0.1 - Write a UNIX command line interpreter
-* Task 3. Simple shell 0.2 - Handle command lines with arguments
-* Task 4. Simple shell 0.3 - Handle PATH - call fork if command no exist
-* Task 5. Simple shell 0.4 - Implement the exit built-in existing in shell
-* Task 6. Simple shell 1.0 - Implement env built-in, that prints current env
-
 
 ## **Authors** :two_women_holding_hands:
 * **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
