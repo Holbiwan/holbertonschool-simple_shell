@@ -30,8 +30,8 @@ A shell is a command-line interpreter that provides a user interface to access t
 |***File***|***Description***|
 |---|---|
   
-|README.md|file that provides information about the project |
-|man_1_simple_shell|manual page (man page) for the simple shell program |
+|README.md|file that provides information about the project|
+|man_1_simple_shell|manual page (man page) for the simple shell program|
 |shell.h|header file containing function prototypes, data structures necessary for the operation of the shell |
 
 |main.c|main source code file where the program starts its execution |
@@ -49,7 +49,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 |free_string|A function for deallocating memory used by a string |
 |free_all|used to free all allocated memory in the program |
 |file_exists|check whether a specified file exists in the system |
-
+I
 
 # **EXEMPLE**
 
