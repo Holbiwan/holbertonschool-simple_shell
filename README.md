@@ -1,10 +1,9 @@
-# **C - Simple Shell** :bell:
+<div align="center">
+  <h1>Simple Shell <img src="https://cdn-icons-png.flaticon.com/128/6821/6821173.png" width=60 align=center> </h1>
 
-### **WHAT IS SHELL ?**
 
+### **WHAT IS SHELL ?** <img src="https://cdn-icons-png.flaticon.com/128/1903/1903496.png" width=45 align=center>
 A shell is a command-line interpreter that provides a user interface to access the operating system's services. It comes in various types; here, we'll focus on the sh (Bourne Shell). Users interact with it via a terminal emulator for data input/output and command execution. Shells handle tasks like process control, I/O redirection, file manipulation, security, and scripting. All Unix systems include at least one Bourne shell interpreter located at /bin/sh.
-
-![This is an image](https://zupimages.net/up/23/34/0d6p.jpg)
 
 # ***Allowed functions and system calls used*** :
 
@@ -136,6 +135,46 @@ $ echo "qwerty" | ./././hsh
 $
 ```
 
-## **Authors** :two_women_holding_hands:
+## Flowchart <img src="https://cdn-icons-png.flaticon.com/128/3051/3051633.png" width=45 align=center>
+
+<img src="https://i.imgur.com/f6YWz5o.jpg" alt="flowchart">
+
+## Compilation <img src="https://cdn-icons-png.flaticon.com/128/8084/8084300.png" width=50 align=center>
+
+To compile the program this command has to be executed:
+```
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+```
+To run the shell is like this:
+```
+$ ./hsh
+```
+
+## List of built-in commands <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
+
+This list is of the built-in commands, apart from those found in the PATH.
+
+| Command  | Description |
+| -------- |:------------|
+| env      | Displays the current environment |
+| exit     | Causes the shell to terminate |
+
+## Usage <img src="https://cdn-icons-png.flaticon.com/512/3123/3123008.png" width=50 align=center>
+
+The shell can be used in interactive or non-interactive mode.
+The interactive mode is how the shell is normally used, the executable file is run and we can write commands, here is an example:
+```
+$ ./hsh
+hsh$ ls
+file1 file2 directory/
+hsh$ pwd
+/home/user/simple_shell/
+hsh$ echo hello_world
+hello_world
+hsh$ exit
+$
+```
+
+## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
 * **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 * **Saima Riaz** - [Github](https://github.com/saima-riaz)
