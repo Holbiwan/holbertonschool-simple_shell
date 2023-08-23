@@ -10,15 +10,16 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <ctype.h>
-/* Global variable */
-extern char **environ;
 
-#define PROMPT "$holbiies "
+
+#define PROMPT "$saTeam "
 #define BUFFER_SIZE 1024
 #define COMMAND_SIZE 64
 #define END_STRING_CHAR '\0'
 
-/* ----------String prototype------------*/
+int file_exists(const char *filepath);
+int find_execute_command(char *command, char *executable_path);
+int custom_isspace(int ch);
 char *_strdup(char *str);
 char *_strcat(char *first, char *second);
 int _strlen(char *str);
@@ -28,13 +29,12 @@ int _strcmp(char *s1, char *s2);
 char **parse_args(char *command);
 char *get_env_value(const char *name);
 char *get_value_from_env(const char *env);
+
+char **_strtok(char *str, const char *delim);
 void free_all(char **command, char *str, char *execute_path);
-int custom_isspace(int ch);
+extern char **environ;
+int _isspace(int ch);
 void free_string(char *string);
 void execute_command(char **command);
-int file_exists(const char *filepath);
-int find_execute_command(char *command, char *executable_path);
 
-/*------------strtok prototype-------------*/
-char **_strtok(char *str, const char *delim);
 #endif
