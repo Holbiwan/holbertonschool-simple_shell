@@ -29,15 +29,26 @@ A shell is a command-line interpreter that provides a user interface to access t
 
 |***File***|***Description***|
 |---|---|
-|AUTHORS|Contributors in this repository|
-|README.md|Detailed description of our project|
-|strok.c| Parse_string ( function that parses string)|
-|string.c|Contains _strlen (length of a string)  / _strdup (returns a pointer to a newly allocated)/ _strcmp (compare two strings)|
-|shell_main.c|Contains _getline  (used to read a string or a line)/ _fork(creating a new process)/ sig_handler (checks if Ctrl C is pressed by the input)|
-|shell.h|Prototypes functions and headers|
-|getline.c|Contains _getline2 (used to read a string or a line)/ _signal (function to handle signal)|
-|_exit.c| _exit (terminates the process)|
-|man_1_simple_shell|Manual page our of Simple Shell|
+  
+|README.md|file that provides information about the project |
+|man_1_simple_shell|manual page (man page) for the simple shell program |
+|shell.h|header file containing function prototypes, data structures necessary for the operation of the shell |
+
+|main.c|main source code file where the program starts its execution |
+|parse_args|parsing command-line arguments passed to the shell when it's started |
+|shell_main.c|code file containing the main logic of the shell, handling user input and executing commands |
+|parse_command.c|module for parsing the command entered by  user and breaking it down into its constituent parts |
+|find_execute_command|search for and execute a specified command |
+|execute.c|contains functions related to executing commands entered by the user |
+|execute_command|contains functions related to executing commands entered by the user |
+|get_env.c|related to handling environment variables in the shell |
+|get_env_value|used to retrieve the value of a specific environment variable |
+|get_value_from_env|Another function related to obtaining values from environment variables |
+|custom_isspace|custom function for checking if a character is a whitespace character |
+|free.c|contains functions for freeing up memory used by the shell program |
+|free_string|A function for deallocating memory used by a string |
+|free_all|used to free all allocated memory in the program |
+|file_exists|check whether a specified file exists in the system |
 
 
 # **EXEMPLE**
