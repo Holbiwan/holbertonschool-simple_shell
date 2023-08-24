@@ -75,9 +75,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 
 # ***Exemple VALGRIND***
 
-```
 ![This is an image](https://zupimages.net/viewer.php?id=23/34/oi6r.png)
-```
 
 # ***Testing*** :diamonds:
 
@@ -130,7 +128,7 @@ $ echo "qwerty" | ./hsh
 ./hsh: 1: qwerty: not found
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
-$
+
 ``
 To compile the program this command has to be executed:
 ```
@@ -140,13 +138,10 @@ To run the shell is like this:
 ```
 $ ./hsh
 ```
-
-```
-
-```
 ### **FLOWCHART**
-![Simple Shell  flowchart
+![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
 
 ### **AUTHORS**
 ***Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 ***Saima Riaz** - [Github](https://github.com/saima-riaz)
+
