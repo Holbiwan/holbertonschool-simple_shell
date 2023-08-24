@@ -76,7 +76,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 # ***Exemple VALGRIND***
 
 ```
-https://zupimages.net/viewer.php?id=23/34/oi6r.png
+![This is an image](https://zupimages.net/up/23/34/oi6r.png)
 ```
 
 # ***Testing*** :diamonds:
