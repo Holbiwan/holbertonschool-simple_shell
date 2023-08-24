@@ -39,7 +39,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 |pathfinder.c|function that finds the path|
 |pathfinder_helper.c|It defines two functions: _strncmp and getenviron|
 |print_env.c|_printenv - function that prints environ|
-|strcat.c|_strcat - function that concatnates|
+|strcat.c|_strcat - function that concatenates|
 |strcpy.c|strcpy - function that copies a string|
 |strdup.c|strdup - function that duplicates a string|
 |strlen.c|strlen - evaluates string length|
@@ -61,52 +61,55 @@ A shell is a command-line interpreter that provides a user interface to access t
 
 # ***Testing*** :diamonds:
 
-* ```Interactive mode```:
+```**Interactive mode**```:
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
+($)
 ($) exit
+$
 
-
-* ```Non-interactive mode```:
+```**Non interactive mode**```:
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
-
+$
 $ cat test_ls_2
 /bin/ls
 /bin/ls
-
+$
 $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
+$
 
 # ***Output*** :diamonds:
 
 * Unless specified otherwise, our program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 * The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
 
-**Example of error with sh**:
+```**Example of error with sh**```:
 $ echo "qwerty" | /bin/sh
 /bin/sh: 1: qwerty: not found
 $ echo "qwerty" | /bin/../bin/sh
 /bin/../bin/sh: 1: qwerty: not found
 
-**Same error with your program hsh**:
+```**Same error with your program hsh**```:
 $ echo "qwerty" | ./hsh
 ./hsh: 1: qwerty: not found
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 
 
-**To compile the program this command has to be executed**:
+```**To compile the program this command has to be executed**```:
 $ ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 
 
-**To run the shell is like this**
+```**To run the shell is like this**```
 $ ```./hsh```
 
 ### **FLOWCHART**
 ![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
+
 
 ### **AUTHORS**
 **Sabrina Papeau** - [Github](https://github.com/Holbiwan) & 
