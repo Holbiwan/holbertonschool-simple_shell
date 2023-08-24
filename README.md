@@ -73,10 +73,10 @@ A shell is a command-line interpreter that provides a user interface to access t
 * Task 5. Simple shell 0.4 - Implement the exit built-in existing in shell
 * Task 6. Simple shell 1.0 - Implement env built-in, that prints current env
 
-# ***Exemple***
+# ***Exemple VALGRIND***
 
 ```
-???????????????????????????
+https://zupimages.net/viewer.php?id=23/34/oi6r.png
 ```
 
 # ***Testing*** :diamonds:
