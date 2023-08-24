@@ -1,6 +1,6 @@
-# **C - Simple Shell**
+# **C - Simple S************hell**
 
-![This is an image](https://zupimages.net/up/23/34/0d6p.jpg)
+![This is an image]( https://zupimages.net/up/23/34/04ww.png)
 
 ### **WHAT IS SHELL ?** <img src="https://cdn-icons-png.flaticon.com/128/1903/1903496.png" width=45 align=center>
 A shell is a command-line interpreter that provides a user interface to access the operating system's services. It comes in various types; here, we'll focus on the sh (Bourne Shell). Users interact with it via a terminal emulator for data input/output and command execution. Shells handle tasks like process control, I/O redirection, file manipulation, security, and scripting. All Unix systems include at least one Bourne shell interpreter located at /bin/sh.
@@ -66,7 +66,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 |free_all|Used to free all allocated memory in the program|
 |file_exists|Check whether a specified file exists in the system|
 
-# **Tasks** :ladder:
+# ***Tasks*** :ladder:
 
 * Task 0. README, man_1_simple_shell, AUTHORS
 * Task 1. Betty would be proud
@@ -76,7 +76,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 * Task 5. Simple shell 0.4 - Implement the exit built-in existing in shell
 * Task 6. Simple shell 1.0 - Implement env built-in, that prints current env
 
-# **Exemple**
+# ***Exemple***
 
 ```
 root@271189847cff:/holbertonschool-simple_shell# ./hsh
@@ -100,7 +100,7 @@ drwxr-xr-x 2 root root    33 Aug 22 22:29 hack
 $
 ```
 
-# **Testing** :diamonds:
+# ***Testing*** :diamonds:
 
 * Interactive mode:
 
@@ -129,7 +129,7 @@ hsh main.c shell.c test_ls_2
 $
 ```
 
-# **Output** :diamonds:
+# ***Output*** :diamonds:
 
 * Unless specified otherwise, our program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 * The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
@@ -174,8 +174,6 @@ This list is of the built-in commands, apart from those found in the PATH.
 | env      | Displays the current environment |
 | exit     | Causes the shell to terminate |
 
-## Usage <img src="https://cdn-icons-png.flaticon.com/512/3123/3123008.png" width=50 align=center>
-
 The shell can be used in interactive or non-interactive mode.
 The interactive mode is how the shell is normally used, the executable file is run and we can write commands, here is an example:
 ```
@@ -190,15 +188,11 @@ hsh$ exit
 $
 ```
 The simple shell's operation depends on helper functions that are used within the main function. The main function will first call write to display the prompt. The read line helper function will read the single world command from the command line. Next, the parse line helper function will match the command to a directory in PATH. If found, it will fork a child process and use execve to execute the program. If not found, then it's a built-in command that doesn't need a new process and will be executed immediately. Either way, the simple shell will display an output and exit the program
-## Flowchart
 
+### **FLOWCHART**
+![Simple Shell  flowchart](https://zupimages.net/up/23/34/keap.jpg)
 
-![image](https://zupimages.net/up/23/34/keap.jpg)
-
-
-## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
-
-
-* **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
-* **Saima Riaz** - [Github](https://github.com/saima-riaz)
+### **AUTHORS**
+***Sabrina Papeau** - [Github](https://github.com/Holbiwan)
+***Saima Riaz** - [Github](https://github.com/saima-riaz)
 
