@@ -18,8 +18,6 @@
 
 int compare(char *string);
 char **strtok_helper(char *line, char *delim);
-char *_realloc(char *ptr, int old_size, int new_size);
-char *_memcpy(char *dest, char *src, unsigned int n);
 
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
