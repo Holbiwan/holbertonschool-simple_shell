@@ -81,30 +81,23 @@ A shell is a command-line interpreter that provides a user interface to access t
 
 * Interactive mode:
 
-```
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
 ($)
 ($) exit
-$
-```
 
 * Non-interactive mode:
-
-```
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
-$
+
 $ cat test_ls_2
 /bin/ls
 /bin/ls
-$
+
 $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
-$
-```
 
 # ***Output*** :diamonds:
 
@@ -113,31 +106,24 @@ $
 
 Example of error with sh:
 
-```
 $ echo "qwerty" | /bin/sh
 /bin/sh: 1: qwerty: not found
 $ echo "qwerty" | /bin/../bin/sh
 /bin/../bin/sh: 1: qwerty: not found
-$
-```
 
-Same error with your program hsh:
-
-```
+Same error with your program hsh :
 $ echo "qwerty" | ./hsh
 ./hsh: 1: qwerty: not found
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 
-``
-To compile the program this command has to be executed:
-```
+To compile the program this command has to be executed :
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-```
+
 To run the shell is like this:
-```
+
 $ ./hsh
-```
+
 ### **FLOWCHART**
 ![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
 
