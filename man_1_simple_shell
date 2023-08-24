@@ -1,167 +1,95 @@
-"25th August 2023"  "Simple Shell Manual"
-NAME  - simple command interpreter (simple shell)
+
+Simple Shell Manual
+August 25, 2023
+
+NAME
+    hsh - Simple Command Interpreter (Simple Shell)
 
 SYNOPSIS
-hsh [options] [file]
+    hsh [options] [file]
 
 DESCRIPTION
-Simple shell is a command interpreter for the system.
-This version is a simple shell that has features similar to sh.
+    Simple Shell is a command interpreter for the system. This version is a simple shell that has features similar to sh.
 
-The simple shell can read a line from the commandline.
-It displays a prompt and receives a command.
-
-After the execution of a command, it displays the prompt again followed by anew line. 
-If an executable file is not present, an error message will be printed and it displays the prompt again.
-
+    Simple Shell reads a line from the command line, displays a prompt, and receives a command. After the execution of a command, it displays the prompt again followed by a new line. If an executable file is not present, an error message will be printed, and it displays the prompt again.
 
 OPTIONS
-The following are options that changes the normal simple shell environment at booting.
+    The following options change the normal Simple Shell environment at booting:
 
-interactive mode
-
-
-non-interactive mode
+    -i  Interactive mode
+    -n  Non-interactive mode
 
 INVOCATION
-In its interactive mode, the simple shell will display a prompt,handle execution and errors.In its non-interactive mode, the simple shell will display prompt, execute a shell script and exits once executed.In its restricted mode, the simple shell will display a prompt but handle limited commands
+    In its interactive mode, Simple Shell displays a prompt, handles execution, and errors. In its non-interactive mode, Simple Shell displays a prompt, executes a shell script, and exits once executed. In its restricted mode, Simple Shell displays a prompt but handles limited commands.
 
 ARGUMENTS
-The argument(s) follows the single word command.
-They are firstsearched in the PATH.  If found, it will read and execute the command, then exit and display the prompt again.  If not found in the PATH, the argument will be searched in the built-in.  When found, it will read and execute the command, then exit and display the prompt again.
+    Arguments follow the single-word command. They are first searched in the PATH. If found, Simple Shell will read and execute the command, then exit and display the prompt again. If not found in the PATH, the argument will be searched in the built-ins. When found, it will read and execute the command, then exit and display the prompt again.
 
-SYNTAX: $ command -arguments
-
-EXAMPLE: $ ls -l
-         $ cd .. 
+    SYNTAX: $ command -arguments
+    EXAMPLE: $ ls -l
+             $ cd ..
 
 DEFINITIONS
-end-of-file (EOF)
-- indicates no more data is available for reading; its keyboard translation is Ctrl+D
-
-exit status
-- return status of a command after it terminates
-
-file command
-- takes a file as a command line argument; the simple shell willnot print a prompt again and will not read from standard input
-
-process identification (pid)
-- a unique identification number assigned by the kernel to everyprocess
-
-prompt
-- displayed when the simple shell is booted
-
-signals
-- a handler condition for processes;
-
-static variable
-- a variable that's declared and initialized only once and staysthe same through the end of the program
+    - EOF (End-of-file): Indicates no more data is available for reading; its keyboard translation is Ctrl+D.
+    - Exit Status: Return status of a command after it terminates.
+    - File Command: Takes a file as a command line argument; Simple Shell will not print a prompt again and will not read from standard input.
+    - PID (Process Identification): A unique identification number assigned by the kernel to every process.
+    - Prompt: Displayed when Simple Shell is booted.
+    - Signals: A handler condition for processes.
+    - Static Variable: A variable that's declared and initialized only once and stays the same through the end of the program.
 
 BUILT-INS
-setenv
-- a built-in function that defines the value of an environmental variable
-
-unsetenv
-- a built-in function that removes an environmental variable
+    - setenv: Defines the value of an environmental variable.
+    - unsetenv: Removes an environmental variable.
 
 ENVIRONMENTAL VARIABLES
-- an environmental variable that contains the path of the home directory
-
-PATH
-- an environmental variable that contains directories where executable files are stored
-
-Print Working Directory (PWD)
-- an environmental variable that contains the path of the current directory
+    - HOME: Contains the path of the home directory.
+    - PATH: Contains directories where executable files are stored.
+    - PWD (Print Working Directory): Contains the path of the current directory.
 
 FUNCTIONS
-chdir
-- a function that changes the current working directory
-
-exit
-- a function that terminates the simple shell; its keyboard translation is Ctrl+C
-
-getcwd
-- a function that copies the pathname of the current working directory
-
-getline
-- a function that reads line from the simple shell
-
-strtok
-- a function that splits a string by a delimiter into substringscalled tokens
+    - chdir: Changes the current working directory.
+    - exit: Terminates Simple Shell; its keyboard translation is Ctrl+C.
+    - getcwd: Copies the pathname of the current working directory.
+    - getline: Reads a line from Simple Shell.
+    - strtok: Splits a string by a delimiter into substrings called tokens.
 
 GLOBAL VARIABLES
-environ
-- a global variable that's an array of strings containing environment variables
+    - environ: A global variable that's an array of strings containing environment variables.
 
 LISTS
-
-&&
-- a shell logical operator that executes if both commands are true
-
- ||
-- a shell logical operator that executes both or whichever command is true
+    - &&: A shell logical operator that executes if both commands are true.
+    - ||: A shell logical operator that executes both or whichever command is true.
 
 SIMPLE COMMANDS
-alias
-- command line argument that prints a list of aliases; an alias is a shortcut to a command
-cd
-- command line argument that changes the current directory
-
-env
-- command line argument that prints a list of environment variables
-
-help
-- command line argument that prints a list of built-in commands
-
-history
-- command line argument that prints a list of previously used commands and their corresponding pids
-
-printenv
-- command line argument that prints the list of environment variables contained in environ
+    - alias: Prints a list of aliases; an alias is a shortcut to a command.
+    - cd: Changes the current directory.
+    - env: Prints a list of environment variables.
+    - help: Prints a list of built-in commands.
+    - history: Prints a list of previously used commands and their corresponding PIDs.
+    - printenv: Prints the list of environment variables contained in environ.
 
 SPECIAL VARIABLES
-$?
-- print the return value of the previously executed process
-
-$$
-- print the pid of the current process
-
-$*
-- print the list of arguments in the current process
+    - $?: Prints the return value of the previously executed process.
+    - $$: Prints the PID of the current process.
+    - $*: Prints the list of arguments in the current process.
 
 SYSTEM CALLS
-execve
-- replaces the current process with a new process
-
-fork
-- creates a new process called a child process
-
-getpid
-- returns the pid of the current process
-
-getppid
-- returns the parent pid of the current process
-
-read
-- reads from a file descriptor in the kernel
-
-signal
-- interrupts current executing process
-
-stat
-- returns current information about a file
-
-wait
-- waits for a child process to terminate
+    - execve: Replaces the current process with a new process.
+    - fork: Creates a new process called a child process.
+    - getpid: Returns the PID of the current process.
+    - getppid: Returns the parent PID of the current process.
+    - read: Reads from a file descriptor in the kernel.
+    - signal: Interrupts the current executing process.
+    - stat: Returns current information about a file.
+    - wait: Waits for a child process to terminate.
 
 SEE ALSO
+    sh(1), bash(1)
 
-sh(1), bash(1),
 BUGS
-
-No known bugs.
+    No known bugs.
 
 AUTHORS
-Sabrina Papeau, Saima Riaz
-
+    Sabrina Papeau, Saima Riaz
 
