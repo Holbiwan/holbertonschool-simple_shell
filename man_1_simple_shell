@@ -1,29 +1,27 @@
-#!/bin/bash
-Simple Shell Manual
-August 25, 2023
+Shell Manual page "August 25, 2023"
 
 NAME
-    hsh - Simple Command Interpreter (Simple Shell)
+hsh - Simple Command Interpreter (Simple Shell)
 
 SYNOPSIS
-    hsh [options] [file]
+hsh [options] [file]
 
 DESCRIPTION
-    Simple Shell is a command interpreter for the system. This version is a simple shell that has features similar to sh.
+Simple Shell is a command interpreter for the system. This version is a simple shell that has features similar to sh.
 
-    Simple Shell reads a line from the command line, displays a prompt, and receives a command. After the execution of a command, it displays the prompt again followed by a new line. If an executable file is not present, an error message will be printed, and it displays the prompt again.
+Simple Shell reads a line from the command line, displays a prompt, and receives a command. After the execution of a command, it displays the prompt again followed by a new line. If an executable file is not present, an error message will be printed, and it displays the prompt again.
 
 OPTIONS
-    The following options change the normal Simple Shell environment at booting:
+The following options change the normal Simple Shell environment at booting:
 
     -i  Interactive mode
     -n  Non-interactive mode
 
 INVOCATION
-    In its interactive mode, Simple Shell displays a prompt, handles execution, and errors. In its non-interactive mode, Simple Shell displays a prompt, executes a shell script, and exits once executed. In its restricted mode, Simple Shell displays a prompt but handles limited commands.
+In its interactive mode, Simple Shell displays a prompt, handles execution, and errors. In its non-interactive mode, Simple Shell displays a prompt, executes a shell script, and exits once executed. In its restricted mode, Simple Shell displays a prompt but handles limited commands.
 
 ARGUMENTS
-    Arguments follow the single-word command. They are first searched in the PATH. If found, Simple Shell will read and execute the command, then exit and display the prompt again. If not found in the PATH, the argument will be searched in the built-ins. When found, it will read and execute the command, then exit and display the prompt again.
+Arguments follow the single-word command. They are first searched in the PATH. If found, Simple Shell will read and execute the command, then exit and display the prompt again. If not found in the PATH, the argument will be searched in the built-ins. When found, it will read and execute the command, then exit and display the prompt again.
 
     SYNTAX: $ command -arguments
     EXAMPLE: $ ls -l
@@ -88,8 +86,8 @@ SEE ALSO
     sh(1), bash(1)
 
 BUGS
-    No known bugs.
+No known bugs.
 
 AUTHORS
-    Sabrina Papeau, Saima Riaz
+Sabrina Papeau, Saima Riaz
 
