@@ -1,49 +1,166 @@
-August 25th 2023 Simple Shel manual page
-
-NAME
-       simple-shell - UNIX command interpreter.
-
+ "25 August 2023"  "Simple Shell Manual"
+ NAME  - simple command interpreter (simple shell)
 SYNOPSIS
-
+[options] [file]
 
 DESCRIPTION
+The simple shell is a simple command interpreter for the system.This version is a simple shell that has features similar to sh.
 
+The simple shell is a command that reads a line from the commandline.  It displays a prompt and receives a command.  It reads a one word command.  After a command has been executed, it displays the prompt again followed by a new line.  If an executable is not present, an error message will be printed and it displays the prompt again.
 OPTIONS
+The following are options that changes the normal simple shell environment at booting.
 
-To use this shell you have to compile doing and running the program doing :
-
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
-
-./hsh
-
-COMMANDS
-
-Several kind of commands can be used :
-
-pwd
-
-ls -l
-
-cat
-
-echo
-
-Execute the specified command and exit.
-
-exit: Exit the shell.
-
-SCRIPTS
-
-The simple-shell can also run shell scripts. A shell script is a file containing a series
-of shell commands that are executed in sequence. To run a script, simply pass its file name
-as an argument to the simple-shell command.
-
-Note that the script should have the appropriate execute permissions for the user running
-the simple-shell command.
+interactive shell
 
 
+
+
+
+non-interactive shell
+
+INVOCATION
+In its interactive mode, the simple shell will display a prompt,handle execution and errors.  In its non-interactive mode, the simple shell will display prompt, execute a shell script and exits once executed.  In its restricted mode, the simple shell will display a prompt but handle limited commands.
+
+ARGUMENTS
+The argument(s) follows the single word command.  They are firstsearched in the PATH.  If found, it will read and execute the command, then exit and display the prompt again.  If not found in the PATH, the argument will be searched in the built-in.  When found, it will read and execute the command, then exit and display the prompt again.
+
+SYNTAX: jj$command -arguments
+
+EXAMPLE: jj$ls -l
+
+DEFINITIONS
+end-of-file (EOF)
+- indicates no more data is available for reading; its keyboard translation is Ctrl+D
+
+exit status
+- return status of a command after it terminates
+
+file command
+- takes a file as a command line argument; the simple shell willnot print a prompt again and will not read from standard input
+
+process identification (pid)
+- a unique identification number assigned by the kernel to everyprocess
+
+prompt
+- displayed when the simple shell is booted
+
+signals
+- a handler condition for processes;
+
+static variable
+- a variable that's declared and initialized only once and staysthe same through the end of the program
+
+BUILT-INS
+setenv
+- a built-in function that defines the value of an environmental variable
+
+unsetenv
+- a built-in function that removes an environmental variable
+
+ENVIRONMENTAL VARIABLES
+- an environmental variable that contains the path of the home directory
+
+PATH
+- an environmental variable that contains directories where executable files are stored
+
+Print Working Directory (PWD)
+- an environmental variable that contains the path of the current directory
+
+FUNCTIONS
+chdir
+- a function that changes the current working directory
+
+exit
+- a function that terminates the simple shell; its keyboard translation is Ctrl+C
+
+getcwd
+- a function that copies the pathname of the current working directory
+
+getline
+- a function that reads line from the simple shell
+
+strtok
+- a function that splits a string by a delimiter into substringscalled tokens
+
+GLOBAL VARIABLES
+environ
+- a global variable that's an array of strings containing environment variables
+
+LISTS
+ ;
+- a commands separator that allows more than one command to be executed; the commands are processed in order
+
+&&
+- a shell logical operator that executes if both commands are true
+
+ ||
+- a shell logical operator that executes both or whichever command is true
+
+SIMPLE COMMANDS
+ alias
+- a command line argument that prints a list of aliases; an alias is a shortcut to a command
+
+cd
+- a command line argument that changes the current directory
+
+env
+- a command line argument that prints a list of environment variables
+
+help
+- a command line argument that prints a list of built-in commands
+
+history
+- a command line argument that prints a list of previously used commands and their corresponding pids
+
+printenv
+- a command line argument that prints the list of environment variables contained in environ
+
+SPECIAL VARIABLES
+$?
+- a special variable that prints the return value of the previously executed process
+
+$$
+- a special variable that prints the pid of the current process
+
+$#
+- a special variable that prints the number of command line arguments
+
+$*
+- a special variable that prints the list of arguments in the current process
+
+SYSTEM CALLS
+execve
+- a system call that replaces the current process with a new process
+
+fork
+- a system call that creates a new process called a child process
+
+getpid
+- a system call that returns the pid of the current process
+
+getppid
+- a system call that returns the parent pid of the current process
+
+read
+- a system call that reads from a file descriptor in the kernel
+
+signal
+- a system call that interrupts current executing process
+
+stat
+- a system call that returns current information about a file
+
+wait
+- a system call that waits for a child process to terminate
+
+SEE ALSO
+
+.I sh(1), csh(1), ksh(1), tcsh(1), zsh(1), bash(1), dash(1)
 BUGS
+
 No known bugs.
 
 AUTHORS
-sabrina Papeau & Saima Riaz
+Sabrina Papeau, Saima Riaz
+
+
