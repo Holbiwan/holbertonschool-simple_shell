@@ -21,7 +21,7 @@ int main(int argc, char **argv, char **envp)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO) == 1)
-			write(1, "$ ", 5);
+			write(1, "$ ", 2);
 		status = getline(&line, &buff, stdin);
 		if (status == -1)
 		{
@@ -35,6 +35,11 @@ int main(int argc, char **argv, char **envp)
 			}
 		}
 		tokens = strtok_helper(line, " ,\n");
+		if (tokens == NULL)
+        	{
+		write(1, "Error tokenizing input\n", 23);
+		continue;
+	       	}
 		cmd = tokens[0];
 		if (compare(cmd) == -1)
 		{
@@ -43,9 +48,14 @@ int main(int argc, char **argv, char **envp)
 				execute(updpath, tokens, envp);
 		}
 		else if (compare(cmd) == 0)
-			execute(cmd, tokens, envp);
+		{
+			free(line);
+			free(tokens);
+			exit(0);
+		}
+			
 		else if (compare(cmd) == 1)
-			write(1, "command not found\n", 18);
+		write(1, "command not found\n", 18);
 	}
 	free(line);
 	free(tokens);
