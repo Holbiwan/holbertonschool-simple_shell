@@ -55,10 +55,6 @@ A shell is a command-line interpreter that provides a user interface to access t
 * Task 5. Simple shell 0.4 - Implement the exit built-in existing in shell
 * Task 6. Simple shell 1.0 - Implement env built-in, that prints current env
 
-# ***Exemple VALGRIND***
-
-![This is an image](https://zupimages.net/up/23/34/oi6r.png)
-
 # ***Testing*** :diamonds:
 
 ```**Interactive mode**```:
@@ -97,6 +93,10 @@ $ echo "qwerty" | ./hsh
 ./hsh: 1: qwerty: not found
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
+
+# ***Exemple VALGRIND***
+
+![This is an image](https://zupimages.net/up/23/34/oi6r.png)
 
 
 **To compile the program this command has to be executed**:
