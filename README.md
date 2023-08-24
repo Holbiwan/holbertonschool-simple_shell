@@ -104,8 +104,9 @@ $ echo "qwerty" | ./././hsh
 ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 
 
-```**To run the shell is like this**```
-**./hsh**
+**To run the shell is like this**:
+
+```./hsh```
 
 ### **FLOWCHART**
 ![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
