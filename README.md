@@ -1,4 +1,4 @@
-# **C - Simple Shell** :bell:
+# **C - Simple Shell**
 
 ![This is an image](https://zupimages.net/up/23/34/0d6p.jpg)
 
@@ -6,7 +6,6 @@
 A shell is a command-line interpreter that provides a user interface to access the operating system's services. It comes in various types; here, we'll focus on the sh (Bourne Shell). Users interact with it via a terminal emulator for data input/output and command execution. Shells handle tasks like process control, I/O redirection, file manipulation, security, and scripting. All Unix systems include at least one Bourne shell interpreter located at /bin/sh.
 
 # ***Allowed functions and system calls used*** :
-
 * ```access``` (man 2 access)
 * ```chdir``` (man 2 chdir)
 * ```close``` (man 2 close)
@@ -190,10 +189,16 @@ hello_world
 hsh$ exit
 $
 ```
-
+The simple shell's operation depends on helper functions that are used within the main function. The main function will first call write to display the prompt. The read line helper function will read the single world command from the command line. Next, the parse line helper function will match the command to a directory in PATH. If found, it will fork a child process and use execve to execute the program. If not found, then it's a built-in command that doesn't need a new process and will be executed immediately. Either way, the simple shell will display an output and exit the program
 ## Flowchart
-![flowchart](https://i.imgur.com/nSQaaQj.jpg)
+
+
+![image](https://zupimages.net/up/23/34/keap.jpg)
+
 
 ## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
+
+
 * **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 * **Saima Riaz** - [Github](https://github.com/saima-riaz)
+
