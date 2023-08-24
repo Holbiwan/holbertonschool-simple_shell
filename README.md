@@ -108,6 +108,9 @@ $ echo "qwerty" | ./././hsh
 
 ```./hsh```
 
+### **MAN PAGE**
+run ```man ./man_1_simple_shell```
+
 ### **FLOWCHART**
 ![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
 
