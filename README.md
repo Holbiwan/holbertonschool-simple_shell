@@ -49,8 +49,8 @@ A shell is a command-line interpreter that provides a user interface to access t
 |---|---|
 |README.md|File that provides information about the project|
 |man_1_simple_shell|Manual page (man page) for the simple shell program|
-|shell.h|Header file containing function prototypes, data structures necessary for the operation of the shell|
-|main.c|Main source code file where the program starts its execution|
+|simplehell.h|Header file containing function prototypes, data structures necessary for the operation of the shell|
+|shell.c|Main source code file where the program starts its execution|
 |parse_args|Parsing command-line arguments passed to the shell when it's started|
 |shell_main.c|Code file containing the main logic of the shell, handling user input and executing commands|
 |parse_command.c|Module for parsing the command entered by  user and breaking it down into its constituent parts|
@@ -79,25 +79,7 @@ A shell is a command-line interpreter that provides a user interface to access t
 # ***Exemple***
 
 ```
-root@271189847cff:/holbertonschool-simple_shell# ./hsh
-$ ls -la
-total 68
-drwxr-xr-x 4 root root   219 Aug 23 09:40 .
-drwxr-xr-x 1 root root  4096 Aug 23 06:55 ..
--rwxr-xr-x 1 root root   243 Aug 22 22:30 AUTHORS
--rwxr--r-- 1 root root  1646 Aug 23 04:38 execute.c
--rwxr--r-- 1 root root   533 Aug 23 04:37 free.c
--rwxr--r-- 1 root root  1169 Aug 23 04:37 get_env.c
-drwxr-xr-x 8 root root   185 Aug 23 09:35 .git
-drwxr-xr-x 2 root root    33 Aug 22 22:29 hack
--rwxr-xr-x 1 root root 18448 Aug 23 06:07 hsh
--rwxr--r-- 1 root root  1642 Aug 23 05:39 main.c
--rwxr-xr-x 1 root root   809 Aug 22 23:21 man_1_simple_shell
--rwxr--r-- 1 root root  1158 Aug 23 04:35 parse_command.c
--rwxr-xr-x 1 root root  4674 Aug 23 09:34 README.md
--rwxr--r-- 1 root root   715 Aug 23 05:54 shell.h
--rwxr--r-- 1 root root   963 Aug 23 05:06 shell_main.c
-$
+???????????????????????????
 ```
 
 # ***Testing*** :diamonds:
@@ -153,9 +135,6 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 ``
-
-## Compilation <img src="https://cdn-icons-png.flaticon.com/128/8084/8084300.png" width=50 align=center>
-
 To compile the program this command has to be executed:
 ```
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -164,35 +143,13 @@ To run the shell is like this:
 ```
 $ ./hsh
 ```
-
-## List of built-in commands <img src="https://cdn-icons-png.flaticon.com/128/868/868684.png" width=45 align=center>
-
-This list is of the built-in commands, apart from those found in the PATH.
-
-| Command  | Description |
-| -------- |:------------|
-| env      | Displays the current environment |
-| exit     | Causes the shell to terminate |
-
-The shell can be used in interactive or non-interactive mode.
-The interactive mode is how the shell is normally used, the executable file is run and we can write commands, here is an example:
+?????????????????????????
 ```
-$ ./hsh
-hsh$ ls
-file1 file2 directory/
-hsh$ pwd
-/home/user/simple_shell/
-hsh$ echo hello_world
-hello_world
-hsh$ exit
-$
-```
-The simple shell's operation depends on helper functions that are used within the main function. The main function will first call write to display the prompt. The read line helper function will read the single world command from the command line. Next, the parse line helper function will match the command to a directory in PATH. If found, it will fork a child process and use execve to execute the program. If not found, then it's a built-in command that doesn't need a new process and will be executed immediately. Either way, the simple shell will display an output and exit the program
 
+```
 ### **FLOWCHART**
-![Simple Shell  flowchart](https://zupimages.net/up/23/34/keap.jpg)
+![Simple Shell  flowchart
 
 ### **AUTHORS**
 ***Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 ***Saima Riaz** - [Github](https://github.com/saima-riaz)
-
