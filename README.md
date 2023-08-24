@@ -192,10 +192,13 @@ $
 The simple shell's operation depends on helper functions that are used within the main function. The main function will first call write to display the prompt. The read line helper function will read the single world command from the command line. Next, the parse line helper function will match the command to a directory in PATH. If found, it will fork a child process and use execve to execute the program. If not found, then it's a built-in command that doesn't need a new process and will be executed immediately. Either way, the simple shell will display an output and exit the program
 ## Flowchart
 
+
 ![image](https://zupimages.net/up/23/34/keap.jpg)
 
 
 ## Authors <img src="https://cdn-icons-png.flaticon.com/128/2463/2463510.png" width=50 align=center>
+
+
 * **Sabrina Papeau** - [Github](https://github.com/Holbiwan)
 * **Saima Riaz** - [Github](https://github.com/saima-riaz)
 
