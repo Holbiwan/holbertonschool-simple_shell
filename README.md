@@ -51,20 +51,17 @@ A shell is a command-line interpreter that provides a user interface to access t
 |man_1_simple_shell|Manual page (man page) for the simple shell program|
 |simplehell.h|Header file containing function prototypes, data structures necessary for the operation of the shell|
 |shell.c|Main source code file where the program starts its execution|
-|parse_args|Parsing command-line arguments passed to the shell when it's started|
-|shell_main.c|Code file containing the main logic of the shell, handling user input and executing commands|
-|parse_command.c|Module for parsing the command entered by  user and breaking it down into its constituent parts|
-|find_execute_command|Search for and execute a specified command|
-|execute.c|Contains functions related to executing commands entered by the user|
-|execute_command|Contains functions related to executing commands entered by the user|
-|get_env.c|Related to handling environment variables in the shell|
-|get_env_value|Used to retrieve the value of a specific environment variable|
-|get_value_from_env|Another function related to obtaining values from environment variables|
-|custom_isspace|Custom function for checking if a character is a whitespace character|
-|free.c|Contains functions for freeing up memory used by the shell program|
-|free_string|A function for deallocating memory used by a string|
-|free_all|Used to free all allocated memory in the program|
-|file_exists|Check whether a specified file exists in the system|
+|builtin_helper.c|builtin_helper that is responsible for handling certain built-in commands within the shell|
+|compare.c|Code file containing the main logic of the shell, handling user input and executing commands|
+|execute.c|function that executes a program,updpath, tokens,environ|
+|pathfinder.c|function that finds the path|
+|pathfinder_helper.c|It defines two functions: _strncmp and getenviron|
+|print_env.c|_printenv - function that prints environ|
+|strcat.c|_strcat - function that concatnates|
+|strcpy.c|strcpy - function that copies a string|
+|strdup.c|strdup - function that duplicates a string|
+|strlen.c|strlen - evaluates string length|
+|strtok_helper.c|strtok_helper - function that splits a line|
 
 # ***Tasks*** :ladder:
 
@@ -143,7 +140,7 @@ To run the shell is like this:
 ```
 $ ./hsh
 ```
-?????????????????????????
+
 ```
 
 ```
