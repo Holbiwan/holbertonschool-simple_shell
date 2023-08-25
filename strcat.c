@@ -1,10 +1,10 @@
 #include "simpleshell.h"
 
 /**
- * *_strcat - function that concatnates
+ * *_strcat - function that concatenates strings
  * @dest: destination string
  * @src: source string
- * Description: Lookup man strcat for reference
+ * 
  * Return: dest string
  */
 char *_strcat(char *dest, char *src)
@@ -18,7 +18,7 @@ char *_strcat(char *dest, char *src)
 		/* loop through the dest string, ignoring the null byte */
 		while (*dest != '\0')
 		{
-			/* increment by one */
+			/* increment*/
 			dest++;
 		}
 		/* loop through the src string, ignoring the null byte */
