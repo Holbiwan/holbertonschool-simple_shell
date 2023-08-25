@@ -75,7 +75,6 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 
-
 # ***Output*** :diamonds:
 
 Unless specified otherwise, our program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
@@ -113,7 +112,6 @@ run ```man ./man_1_simple_shell```
 
 ### **FLOWCHART**
 ![Simple Shell  flowchart]( https://zupimages.net/up/23/34/97es.png)
-
 
 ### **AUTHORS**
 **Sabrina Papeau** - [Github](https://github.com/Holbiwan) & 
