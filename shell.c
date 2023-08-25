@@ -1,10 +1,10 @@
 #include "simpleshell.h"
 
 /**
- * main - function that invokes simple shell
- * @argc: number of arguments
- * @argv: arguments
- * @envp: NULL terminated array of strings
+ * main - Entry point for invoking the simple shell
+ * @argc: number of command-line arguments
+ * @argv: command -line arguments
+ * @envp: NULL terminated array of environment strings
  * Return: 0
  */
 
