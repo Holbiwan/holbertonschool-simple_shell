@@ -1,9 +1,9 @@
 #include "simpleshell.h"
 
 /**
- * builtin_helper - function that calls builtins
- * @s: builtin commands
- * Return: varies depending on check will be int
+ * builtin_helper - function calls built-in commands
+ * @s: command to check if it's buil-in
+ * Return: change depending on the command will be an int
  */
 int builtin_helper(char *s)
 {
