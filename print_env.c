@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _printenv - function that prints environ
+ * _printenv - Function that prints environment variables
  * @s: array of strings
  * Return: array of strings
  */
