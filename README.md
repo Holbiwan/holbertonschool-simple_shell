@@ -81,10 +81,12 @@ hsh main.c shell.c test_ls_2
 
 
 # **Exemple TESTING**
+
+```
 ![This is an image]https://zupimages.net/up/23/34/rjky.png
+```
 
-
-# ***Output*** :diamonds:
+# **Output*** :diamonds:
 
 Unless specified otherwise, our program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
