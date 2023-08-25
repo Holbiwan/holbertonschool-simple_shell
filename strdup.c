@@ -1,10 +1,10 @@
 #include "simpleshell.h"
 
 /**
- * *_strdup - function that duplicates a string
- * @str: string
- * Description: Lookup man strdup for reference
- * Return: NULL for fail or if string is NULL
+ * *_strdup - Duplicates a string
+ * @str: the string to duplicate
+ * Description: this function duplicates the input string and return a pointer
+ * Return: Pointer to the duplicated string or NULL on failure
  */
 char *_strdup(char *str)
 {
