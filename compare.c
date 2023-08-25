@@ -1,11 +1,10 @@
 #include "simpleshell.h"
 /**
- * compare - tests string for /
- * @string: - command passed in
+ * compare - tests if command is executable  checking for '/'
+ * @string: - the command to be checked
  *
- * Return: int
+ * Return: 0 if executable, 1 if not, -1 on error
  */
-
 int compare(char *string)
 {
 	int i = 0;
