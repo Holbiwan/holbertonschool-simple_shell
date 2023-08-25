@@ -57,15 +57,18 @@ A shell is a command-line interpreter that provides a user interface to access t
 
 # ***Testing*** :diamonds:
 
-```**Interactive mode**```:
-
+**Interactive mode**:
+```
 $ ./hsh
-/bin/ls
-hsh main.c shell.c
-($) exit
+$ /bin/ls
+$ hsh main.c
+$ shell.c
+$ exit
+```
 
-```**Non interactive mode**```:
+**Non interactive mode**:
 
+```
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
 $ cat test_ls_2
@@ -74,6 +77,7 @@ $ cat test_ls_2
 $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
+```
 
 # ***Output*** :diamonds:
 
