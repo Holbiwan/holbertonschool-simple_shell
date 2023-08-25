@@ -82,9 +82,9 @@ hsh main.c shell.c test_ls_2
 
 # **Exemple TESTING**
 
-```
-![This is an image]https://zupimages.net/up/23/34/rjky.png
-```
+
+![This is an image](https://zupimages.net/up/23/34/rjky.png)
+
 
 # **Output*** :diamonds:
 
