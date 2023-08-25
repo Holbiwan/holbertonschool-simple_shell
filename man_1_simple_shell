@@ -3,167 +3,167 @@
 .B hsh - simple command interpreter (simple shell)
 .SH SYNOPSIS
 .B hsh [options] [file]
+
 .SH DESCRIPTION
-The simple shell is a simple command interpreter for the system.  This version is a simple shell that has features similar to sh.
+The simple shell is a command interpreter for the system.This version is a simple shell that has features similar to sh.
+
 .PP
-The simple shell is a command that reads a line from the command line.  It displays a prompt and receives a command.  It reads a one word command.  After a command has been executed, it displays the prompt again followed by a new line.  If an executable is not present, an error message will be printed and it displays the prompt again.
+Simple Shell reads a line from the command line, displays a prompt, and receives a command. After the execution of a command, it displays the prompt again followed by a new line. If an executable file is not present, an error message will be printed, and it displays the prompt again.
+
 .SH OPTIONS
-The following are options that changes the normal simple shell environment at booting.
+The following options change the normal simple shell environment at booting.
 .PP
-.B -i
 .RS
-interactive shell
+-i Interactive mode
 .RE
 .PP
-.B -l
 .RS
-non-interactive shell
+-n Non-interactive mode
 .RE
 .PP
-.B -r
 .RS
-restricted shell
+-r Restricted mode
 .RE
 .PP
 .SH INVOCATION
-In its interactive mode, the simple shell will display a prompt, handle execution and errors.  In its non-interactive mode, the simple shell will display prompt, execute a shell script and exits once executed.  In its restricted mode, the simple shell will display a prompt but handle limited commands.
+In its interactive mode,simple shell displays a prompt, handle execution and errors.In its non-interactive mode, the simple shell displays a prompt, executes a shell script and exits once executed.In restricted mode,simple shell displays a prompt but handle limited commands.
 .PP
 .SH ARGUMENTS
 .PP
-The argument(s) follows the single word command.  They are first searched in the PATH.  If found, it will read and execute the command, then exit and display the prompt again.  If not found in the PATH, the argument will be searched in the built-in.  When found, it will read and execute the command, then exit and display the prompt again.
+Arguments follow the single-word command. They are first searched in the PATH. If found, Simple Shell will read and execute the command, then exit and display the prompt again. If not found inthe PATH, the argument will be searched in the built-ins. When found, it will read and execute the command, then exit and display the prompt again.
 .PP
 SYNTAX: $command -arguments
 .PP
 EXAMPLE: $ls -l
 .PP
 .SH DEFINITIONS
-.B end-of-file (EOF)
+.B EOF (End-of-fil)
 - indicates no more data is available for reading; its keyboard translation is Ctrl+D
 .PP
-.B exit status
+.B Exit Status
 - return status of a command after it terminates
 .PP
-.B file command
-- takes a file as a command line argument; the simple shell will not print a prompt again and will not read from standard input
+.B File Command
+- Takes a file as a command line argument;Simple Shell will not print a prompt again and will not read from standard input
 .PP
-.B process identification (pid)
-- a unique identification number assigned by the kernel to every process
+.B PID (Process Identification)
+- A unique identification number assigned by the kernel to every process
 .PP
-.B prompt
-- displayed when the simple shell is booted
+.B Prompt
+- Displayed when simple shell is booted
 .PP
-.B signals
-- a handler condition for processes;
+.B Signals
+- A handler condition for processes;
 .PP
-.B static variable
-- a variable that's declared and initialized only once and stays the same through the end of the program
+.B Static Variable
+- A variable that's declared and initialized only once and stays the same through the end of the program
 .PP
 .SH BUILT-INS
 .B setenv
-- a built-in function that defines the value of an environmental variable
+- Defines the value of an environmental variable
 .PP
 .B unsetenv
-- a built-in function that removes an environmental variable
+- Removes an environmental variable
 .PP
 .SH ENVIRONMENTAL VARIABLES
 .B HOME
-- an environmental variable that contains the path of the home directory
+- Contains the path of the home directory
 .PP
 .B PATH
-- an environmental variable that contains directories where executable files are stored
+- Contains directories where executable files are stored
 .PP
-.B Print Working Directory (PWD)
-- an environmental variable that contains the path of the current directory
+.B PWD (Print Working Directory)
+- contains the path of the current directory
 .PP
 .SH FUNCTIONS
 .B chdir
-- a function that changes the current working directory
+- Changes the current working directory
 .PP
 .B exit
-- a function that terminates the simple shell; its keyboard translation is Ctrl+C
+- Terminates Simple Shell; its keyboard translation is Ctrl+C
 .PP
 .B getcwd
-- a function that copies the pathname of the current working directory
+- Copies the pathname of the current working directory
 .PP
 .B getline
-- a function that reads line from the simple shell
+- Reads line from the simple shell
 .PP
 .B strtok
-- a function that splits a string by a delimiter into substrings called tokens
+- Splits a string by a delimiter into substrings called tokens
 .PP
 .SH GLOBAL VARIABLES
 .B environ
-- a global variable that's an array of strings containing environment variables
+- A global variable that's an array of strings containing environment variables
 .PP
 .SH LISTS
 .PP
 .B ;
-- a commands separator that allows more than one command to be executed; the commands are processed in order
+- A command separator that allows more than one command to be executed; the commands are processed in order
 .PP
 .B &&
-- a shell logical operator that executes if both commands are true
+- A shell logical operator that executes if both commands are true
 .PP
 .B ||
-- a shell logical operator that executes both or whichever command is true
+- A shell logical operator that executes both or whichever command is true
 .PP
 .SH SIMPLE COMMANDS
 .B alias
-- a command line argument that prints a list of aliases; an alias is a shortcut to a command
+- A command line argument that prints a list of aliases; an alias is a shortcut to a command
 .PP
 .B cd
-- a command line argument that changes the current directory
+- A command line argument that changes the current directory
 .PP
 .B env
-- a command line argument that prints a list of environment variables
+- A command line argument that prints a list of environment variables
 .PP
 .B help
-- a command line argument that prints a list of built-in commands
+- A command line argument that prints a list of built-in commands
 .PP
 .B history
-- a command line argument that prints a list of previously used commands and their corresponding pids
+- A command line argument that prints a list of previously used commands and their corresponding pids
 .PP
 .B printenv
-- a command line argument that prints the list of environment variables contained in environ
+- A command line argument that prints the list of environment variables contained in environ
 .SH SPECIAL VARIABLES
 .B $?
-- a special variable that prints the return value of the previously executed process
+- A special variable that prints the return value of the previously executed process
 .PP
 .B $$
-- a special variable that prints the pid of the current process
+- A special variable that prints the pid of the current process
 .PP
 .B $#
-- a special variable that prints the number of command line arguments
+- A special variable that prints the number of command line arguments
 .PP
 .B $*
-- a special variable that prints the list of arguments in the current process
+- A special variable that prints the list of arguments in the current process
 .PP
 .SH SYSTEM CALLS
 .B execve
-- a system call that replaces the current process with a new process
+- A system call that replaces the current process with a new process
 .PP
 .B fork
-- a system call that creates a new process called a child process
+- A system call that creates a new process called a child process
 .PP
 .B getpid
-- a system call that returns the pid of the current process
+- A system call that returns the pid of the current process
 .PP
 .B getppid
-- a system call that returns the parent pid of the current process
+- A system call that returns the parent pid of the current process
 .PP
 .B read
-- a system call that reads from a file descriptor in the kernel
+- A system call that reads from a file descriptor in the kernel
 .PP
 .B signal
-- a system call that interrupts current executing process
+- A system call that interrupts current executing process
 .PP
 .B stat
-- a system call that returns current information about a file
+- A system call that returns current information about a file
 .PP
 .B wait
-- a system call that waits for a child process to terminate
+- A system call that waits for a child process to terminate
 .PP
 .SH SEE ALSO
-.I sh(1), csh(1), ksh(1), tcsh(1), zsh(1), bash(1), dash(1)
+.I sh(1), bash(1),
 .SH BUGS
 No known bugs.
 .SH AUTHORS
