@@ -25,9 +25,11 @@ The following options change the normal simple shell environment at booting.
 -r Restricted mode
 .RE
 .PP
+
 .SH INVOCATION
 In its interactive mode,simple shell displays a prompt, handle execution and errors.In its non-interactive mode, the simple shell displays a prompt, executes a shell script and exits once executed.In restricted mode,simple shell displays a prompt but handle limited commands.
 .PP
+
 .SH ARGUMENTS
 .PP
 Arguments follow the single-word command. They are first searched in the PATH. If found, Simple Shell will read and execute the command, then exit and display the prompt again. If not found inthe PATH, the argument will be searched in the built-ins. When found, it will read and execute the command, then exit and display the prompt again.
@@ -36,6 +38,7 @@ SYNTAX: $command -arguments
 .PP
 EXAMPLE: $ls -l
 .PP
+
 .SH DEFINITIONS
 .B EOF (End-of-fil)
 - indicates no more data is available for reading; its keyboard translation is Ctrl+D
@@ -58,6 +61,7 @@ EXAMPLE: $ls -l
 .B Static Variable
 - A variable that's declared and initialized only once and stays the same through the end of the program
 .PP
+
 .SH BUILT-INS
 .B setenv
 - Defines the value of an environmental variable
@@ -65,6 +69,7 @@ EXAMPLE: $ls -l
 .B unsetenv
 - Removes an environmental variable
 .PP
+
 .SH ENVIRONMENTAL VARIABLES
 .B HOME
 - Contains the path of the home directory
@@ -91,10 +96,12 @@ EXAMPLE: $ls -l
 .B strtok
 - Splits a string by a delimiter into substrings called tokens
 .PP
+
 .SH GLOBAL VARIABLES
 .B environ
 - A global variable that's an array of strings containing environment variables
 .PP
+
 .SH LISTS
 .PP
 .B ;
@@ -106,7 +113,8 @@ EXAMPLE: $ls -l
 .B ||
 - A shell logical operator that executes both or whichever command is true
 .PP
-.SH SIMPLE COMMANDS
+
+.SH SIMPLE SHELL COMMANDS
 .B alias
 - A command line argument that prints a list of aliases; an alias is a shortcut to a command
 .PP
@@ -124,6 +132,7 @@ EXAMPLE: $ls -l
 .PP
 .B printenv
 - A command line argument that prints the list of environment variables contained in environ
+
 .SH SPECIAL VARIABLES
 .B $?
 - A special variable that prints the return value of the previously executed process
@@ -137,6 +146,7 @@ EXAMPLE: $ls -l
 .B $*
 - A special variable that prints the list of arguments in the current process
 .PP
+
 .SH SYSTEM CALLS
 .B execve
 - A system call that replaces the current process with a new process
@@ -164,7 +174,9 @@ EXAMPLE: $ls -l
 .PP
 .SH SEE ALSO
 .I sh(1), bash(1),
+
 .SH BUGS
 No known bugs.
+
 .SH AUTHORS
 Sabrina PAPEAU, Saima Riaz
