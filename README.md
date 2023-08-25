@@ -79,28 +79,38 @@ hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 ```
 
+
+# **Exemple TESTING**
+![This is an image]https://zupimages.net/up/23/34/rjky.png
+
+
 # ***Output*** :diamonds:
 
 Unless specified otherwise, our program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
 
 
-```Example of error with sh```:
+**Example of error with sh**:
+```
 $ echo "qwerty" | /bin/sh
 /bin/sh: 1: qwerty: not found
+
 $ echo "qwerty" | /bin/../bin/sh
 /bin/../bin/sh: 1: qwerty: not found
+```
 
-```Same error with your program hsh```:
+**Same error with your program hsh**:
+```
 $ echo "qwerty" | ./hsh
 ./hsh: 1: qwerty: not found
+
 $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
+```
 
-# ***Exemple VALGRIND***
+# **Exemple VALGRIND**
 
 ![This is an image](https://zupimages.net/up/23/34/oi6r.png)
-
 
 **To compile the program this command has to be executed**:
 
@@ -110,6 +120,7 @@ $ echo "qwerty" | ./././hsh
 **To run the shell is like this**:
 
 ```./hsh```
+
 
 ### **MAN PAGE**
 run ```man ./man_1_simple_shell```
