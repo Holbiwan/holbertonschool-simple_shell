@@ -1,11 +1,11 @@
 #include "simpleshell.h"
 
 /**
- * *_strcpy - function that copies a string
+ * *_strcpy - Copy a string
  * @dest: destination string
  * @src: source string
- * Description: Copies and returns the string
- * Return: First, solve the problem. Then, write the code
+ * Description: this function copie the source string to the destination
+ * Return: Pointer to the destination string
  */
 char *_strcpy(char *dest, char *src)
 {
